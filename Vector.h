@@ -1,11 +1,6 @@
 /*
-
-	Code by: Travis Stewart
-		
-	This was originally created as a simple vector class that I could use in my computer graphics course. 
-	It contains a Vector class I used in many assignments and didn't want to remake for each one.
-	It supports common vector operations.
-
+CSCE 441 Assignment 6
+Completed by: Travis Stewart
 */
 
 #include "Global.h"

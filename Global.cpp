@@ -1,10 +1,6 @@
 /*
-
-	Code by: Travis Stewart
-		
-	This was originally created as a simple helper library that I could use in my computer graphics course. 
-	It contains various funtions I used in many assignments and didn't want to remake for each one.
-
+CSCE 441 Assignment 6
+Completed by: Travis Stewart
 */
 
 #include "Global.h"

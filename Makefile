@@ -1,17 +1,27 @@
 
-CC=g++ -O3 -Wno-deprecated
+CC=g++-7 -O3 -Wno-deprecated
 STD=-std=c++11
-CFLAGS=-framework OpenGL -framework GLUT 
+CFLAGS=-framework OpenGL -framework GLUT -fopenmp
 LIB = -lm -ldl -lrt
+LDFLAGS=  -L/usr/local/opt/llvm/lib
+CPPFLAGS= -I/usr/local/opt/llvm/include
 
-all: main.o
-	$(CC) $(STD) $(CFLAGS) -o main main.o 
+all: main.o global.o vector.o
+	$(CC) $(STD) $(CFLAGS) -o main *.o 
 	
-main.o: *.cpp
-	$(CC) $(STD) $(CFLAGS) -c *.cpp 
+main.o: Main.cpp
+	$(CC) $(STD) $(CFLAGS) -c Main.cpp 
 
-run: main
+global.o: Global.cpp
+	$(CC) $(STD) $(CFLAGS) -c Global.cpp 
+
+vector.o: Vector.cpp
+	$(CC) $(STD) $(CFLAGS) -c Vector.cpp 
+
+run: main.o global.o vector.o
+	$(CC) $(STD) $(CFLAGS) -o main *.o 
 	./main
 
+	
 clean:
 	rm -rf *o main *.gch
