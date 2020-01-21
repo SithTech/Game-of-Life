@@ -1,6 +1,6 @@
 /*
-Util.h -- This is a colection of misc functions that have been found useful at some point
-Coded by: Travis Stewart
+Util.h -- This is a collection of misc functions that have been found useful at some point
+Developed by: Travis Stewart
 */
 
 #ifndef UTIL_H
